@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>713</width>
+    <height>584</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>713</width>
+    <height>410</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>713</width>
+    <height>610</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>691</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="configurationTab">
+     <attribute name="title">
+      <string>Configuration</string>
+     </attribute>
+     <widget class="QWidget" name="formLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>344</width>
+        <height>204</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="populationModelLabel">
+         <property name="text">
+          <string>Population Model:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="populationModelComboBox">
+         <item>
+          <property name="text">
+           <string>Pure Reinsertion</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Uniform Reinsertion</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Elitist Reinsertion</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fitness Reinsertion + Elitism</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="populationSizeLabel">
+         <property name="text">
+          <string>Population Size:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="populationSizeLineEdit"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="fitnessEvaluationFunctionLabel">
+         <property name="text">
+          <string>Fitness Evaluation Function:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="fitnessEvaluationFunctionComboBox">
+         <item>
+          <property name="text">
+           <string>Linear Ranking</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sigma Scaling</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Raw Value</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="mutationRateLabel">
+         <property name="text">
+          <string>Mutation Rate:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="mutationRateLineEdit"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="crossoverRateLabel">
+         <property name="text">
+          <string>Crossover Rate:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="crossoverRateLineEdit"/>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="rowColumnOperatorRateLabel">
+         <property name="text">
+          <string>Row/Column Operator Rate:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="rowColumnOperatorRateLineEdit"/>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="stopConditionLabel">
+         <property name="text">
+          <string>Stop Condition:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QComboBox" name="stopConditionComboBox">
+         <item>
+          <property name="text">
+           <string>Number of generations...</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Generations without improvement...</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="selectionSchemeLabel">
+         <property name="text">
+          <string>Selection Scheme:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="selectionSchemeComboBox">
+         <item>
+          <property name="text">
+           <string>Uniform</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Roulette Wheel</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Tournament</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SUS</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>10</y>
+        <width>261</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Population Model Configuration</string>
+      </property>
+      <widget class="QWidget" name="formLayoutWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>241</width>
+         <height>67</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout_4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="genitorLabel">
+          <property name="text">
+           <string>Genitor:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QCheckBox" name="genitorCheckBox"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="temporaryPopulationSizeLabel">
+          <property name="text">
+           <string>Temporary Population Size:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="temporaryPopulationSizeLineEdit"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="reinsertionCoefficientLabel">
+          <property name="text">
+           <string>Reinsertion Coefficient:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="reinsertionCoefficientLineEdit"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>110</y>
+        <width>261</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Fitness Evaluation Function Configuration</string>
+      </property>
+      <widget class="QWidget" name="formLayoutWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="selectivePressureLabel">
+          <property name="text">
+           <string>Selective Pressure:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="selectivePressureLineEdit"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>180</y>
+        <width>261</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Stop Condition Configuration</string>
+      </property>
+      <widget class="QWidget" name="formLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="numberOfGenerationsLabel">
+          <property name="text">
+           <string>Number of Generations:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="numberOfGenerationsLineEdit"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="tournamentSelGroupBox">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>250</y>
+        <width>261</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Tournament Selection Configuration</string>
+      </property>
+      <widget class="QWidget" name="formLayoutWidget_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>241</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout_5">
+        <item row="0" column="0">
+         <widget class="QLabel" name="allowDuplicatesLabel">
+          <property name="text">
+           <string>Allow Duplicates:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QCheckBox" name="allowDuplicatesCheckBox"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="tournamentGroupSizeLabel">
+          <property name="text">
+           <string>Tournament Group Size:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="tournamentGroupSizeLineEdit"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="problemViewTab">
+     <attribute name="title">
+      <string>Problem</string>
+     </attribute>
+     <widget class="QTextBrowser" name="problemView">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>661</width>
+        <height>511</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="resultTab">
+     <attribute name="title">
+      <string>Results</string>
+     </attribute>
+     <widget class="QWidget" name="graphWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>661</width>
+        <height>351</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="logBrowser">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>370</y>
+        <width>661</width>
+        <height>151</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
